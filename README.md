@@ -43,24 +43,16 @@ This project implements a binary classification system to predict whether a pati
    Ensure `healthcare-dataset-stroke-data.csv` is in the project root.
 
 ## 🚀 Usage
-### 1. Run Complete Analysis
+### 1. Launch Web Application
 ```bash
-python stroke_prediction_analysis.py
-```
-- Loads and preprocesses the dataset
-- Trains both models with SMOTE and class weights
-- Evaluates and prints metrics
-
-### 2. Launch Web Application
-```bash
-streamlit run streamlit_app.py
+streamlit run stroke_prediction.py
 ```
 - Open your browser to `http://localhost:8501`
 - Input patient data and get real-time risk predictions
 
 ### 3. Visualize Model Metrics
 ```bash
-python single_model_metrics_visualization.py
+python metrics_visualization.py
 ```
 - Shows bar charts of accuracy, precision, recall, F1-score, and ROC-AUC for each model (test set only)
 
@@ -69,9 +61,8 @@ python single_model_metrics_visualization.py
 stroke-prediction-system/
 │
 ├── healthcare-dataset-stroke-data.csv    # Dataset file
-├── stroke_prediction_analysis.py         # Main analysis script
-├── streamlit_app.py                      # Web application
-├── single_model_metrics_visualization.py # Model metrics visualization (test set)
+├── stroke_prediction.py                  # Web application
+├── metrics_visualization.py              # Model metrics visualization (test set)
 ├── requirements.txt                      # Python dependencies
 ├── README.md                             # Project documentation
 ```
@@ -92,10 +83,3 @@ stroke-prediction-system/
 - Dataset size and class imbalance
 - Model performance may vary on new data
 - Not intended for clinical decision-making
-
-## 📄 License
-MIT License
-
----
-
-**Disclaimer**: This tool is for educational and research purposes only. Always consult healthcare professionals for medical decisions. The predictions should not be used as a substitute for professional medical advice, diagnosis, or treatment. 
